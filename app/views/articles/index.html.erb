@@ -1,2 +1,8 @@
-<%= @images %>
-
+<% raise %>
+<% @images.each do |image| %>
+<% image.each do |img| %>
+<% if img != "null" && img != nil && !(img.include?("footer")) %>
+<img src="<%= img %>" alt="" style="width: 200px;">
+<% end %>
+<% end %>
+<% end %>
